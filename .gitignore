@@ -1,0 +1,13 @@
+.idea
+server/.idea
+
+web/*.log
+web/*.tsbuildinfo
+.DS_Store
+web/.env*
+web/.vercel
+web/.next/
+web/node_modules/
+web/out/
+
+web/!.env.example
