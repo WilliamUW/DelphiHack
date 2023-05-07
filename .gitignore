@@ -1,13 +1,14 @@
 .idea
 server/.idea
 
-web/*.log
-web/*.tsbuildinfo
+web/slate-nft/*.log
+web/slate-nft/*.tsbuildinfo
 .DS_Store
-web/.env*
-web/.vercel
-web/.next/
-web/node_modules/
-web/out/
+web/slate-nft/.env*
+web/slate-nft/.vercel
+web/slate-nft/.next/
+web/slate-nft/node_modules/
+web/slate-nft/out/
 
 web/!.env.example
+/web/slate-nft/.yarnrc.yml
