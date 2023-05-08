@@ -1,4 +1,5 @@
 import { toast } from 'react-hot-toast'
+// @ts-ignore
 import type { Renderable } from 'react-hot-toast/dist/core/types'
 
 export async function copy(text: string, message: Renderable = 'Copied to clipboard!') {
