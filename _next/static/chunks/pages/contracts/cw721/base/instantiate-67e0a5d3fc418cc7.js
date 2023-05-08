@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[320],{37269:function(n,_,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/contracts/cw721/base/instantiate",function(){return t(6582)}])}},function(n){n.O(0,[955,237,582,774,888,179],(function(){return _=37269,n(n.s=_);var _}));var _=n.O();_N_E=_}]);
