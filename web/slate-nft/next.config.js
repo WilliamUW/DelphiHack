@@ -12,7 +12,7 @@ const nextConfig = {
   env: {
     APP_VERSION: packageJson.version,
     NEXT_PUBLIC_WEBSITE_URL:
-      process.env.NODE_ENV === 'development' ? LOCALHOST_URL : process.env.NEXT_PUBLIC_WEBSITE_URL,
+      process.env.NODE_ENV === 'development' ? LOCALHOST_URL : "https://themarstonconnell.github.io/DelphiHack/",
   },
   reactStrictMode: true,
   trailingSlash: true,
@@ -34,11 +34,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: '/airdrops/:address/manage',
-        destination: '/airdrops/manage',
-        permanent: true,
-      },
+
     ]
   },
 }
