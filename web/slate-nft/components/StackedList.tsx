@@ -10,7 +10,7 @@ export const StackedList = (props: StackedListProps) => {
 
   return (
     <dl
-      className={clsx('bg-white/5 rounded border-2 border-white/25', 'divide-y-2 divide-white/25', className)}
+      className={clsx('bg-white/5 rounded border-2 border-black/25', 'divide-y-2 divide-white/25', className)}
       {...rest}
     />
   )
@@ -25,7 +25,7 @@ StackedList.Item = function StackedListItem(props: StackedListItemProps) {
 
   return (
     <div className="grid grid-cols-3 py-3 px-4 hover:bg-white/5">
-      <dd className="font-medium text-white/50">{name}</dd>
+      <dd className="font-medium text-black/50">{name}</dd>
       <dt className={clsx('col-span-2', className)} {...rest} />
     </div>
   )

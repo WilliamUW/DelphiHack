@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        juno: { DEFAULT: '#08B4B2' },
+        juno: { DEFAULT: '#FF9243' },
         dark: { DEFAULT: '#06090B' },
         gray: { DEFAULT: '#F3F6F8' },
         'dark-gray': { DEFAULT: '#191D20' },
@@ -16,8 +16,8 @@ module.exports = {
 
         neutral: colors.neutral,
         plumbus: {
-          DEFAULT: '#08B4B2',
-          light: '#1dcfcc',
+          DEFAULT: '#FF9243',
+          light: '#FFA253',
           matte: '#94e3e2',
           dark: '#038a88',
           10: '#cdf7f7',
@@ -25,7 +25,7 @@ module.exports = {
           30: '#94e3e2',
           40: '#84dbda',
           50: '#08B4B2',
-          60: '#069c9a',
+          60: '#EF8233',
           70: '#038a88',
           80: '#027371',
           90: '#015958',

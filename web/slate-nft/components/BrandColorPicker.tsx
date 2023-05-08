@@ -16,7 +16,7 @@ export const BrandColorPicker = ({ onChange }: BrandColorPickerProps) => {
         <button
           key={`change-color-${color}`}
           className={clsx(
-            'w-8 h-8 rounded border border-white/20',
+            'w-8 h-8 rounded border border-black/20',
             'hover:ring-2 focus:ring-2 ring-white/50 transition',
             {
               'bg-plumbus': color === 'plumbus',

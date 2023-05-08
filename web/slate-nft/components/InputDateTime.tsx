@@ -6,10 +6,10 @@ import { FaCalendar, FaTimes } from 'react-icons/fa'
 export const InputDateTime = ({ className, ...rest }: DateTimePickerProps) => {
   return (
     <DateTimePicker
-      calendarIcon={<FaCalendar className="text-white hover:text-white/80" />}
+      calendarIcon={<FaCalendar className="text-black hover:text-black/80" />}
       className={clsx(
-        'bg-white/10 rounded border-2 border-white/20 form-input',
-        'placeholder:text-white/50',
+        'bg-white/10 rounded border-2 border-black/20 form-input',
+        'placeholder:text-black/50',
         'focus:ring focus:ring-plumbus-20',
         className,
       )}

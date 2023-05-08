@@ -109,7 +109,7 @@ export const AirdropsTable = (props: AirdropsTableProps) => {
                     <div>{airdrop.name}</div>
                     <Tooltip label="Click to copy contract addreess">
                       <button
-                        className="group flex space-x-2 font-mono text-xs text-white/50 hover:underline"
+                        className="group flex space-x-2 font-mono text-xs text-black/50 hover:underline"
                         onClick={() => void copy(airdrop.contractAddress)}
                         type="button"
                       >
@@ -150,7 +150,7 @@ export const AirdropsTable = (props: AirdropsTableProps) => {
           ))
         ) : (
           <tr>
-            <td className="p-4 text-center text-white/50" colSpan={6}>
+            <td className="p-4 text-center text-black/50" colSpan={6}>
               No airdrops available :(
             </td>
           </tr>

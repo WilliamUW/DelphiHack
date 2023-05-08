@@ -31,8 +31,8 @@ export const ExecuteCombobox = ({ value, onChange }: ExecuteComboboxProps) => {
       <div className="relative">
         <Combobox.Input
           className={clsx(
-            'w-full bg-white/10 rounded border-2 border-white/20 form-input',
-            'placeholder:text-white/50',
+            'w-full bg-white/10 rounded border-2 border-black/20 form-input',
+            'placeholder:text-black/50',
             'focus:ring focus:ring-plumbus-20',
           )}
           displayValue={(val?: ExecuteListItem) => val?.name ?? ''}
@@ -59,7 +59,7 @@ export const ExecuteCombobox = ({ value, onChange }: ExecuteComboboxProps) => {
             )}
           >
             {filtered.length < 1 && (
-              <span className="flex flex-col justify-center items-center p-4 text-sm text-center text-white/50">
+              <span className="flex flex-col justify-center items-center p-4 text-sm text-center text-black/50">
                 Message type not found.
               </span>
             )}
@@ -80,7 +80,7 @@ export const ExecuteCombobox = ({ value, onChange }: ExecuteComboboxProps) => {
       </div>
 
       {value && (
-        <div className="flex space-x-2 text-white/50">
+        <div className="flex space-x-2 text-black/50">
           <div className="mt-1">
             <FaInfoCircle className="w-3 h-3" />
           </div>

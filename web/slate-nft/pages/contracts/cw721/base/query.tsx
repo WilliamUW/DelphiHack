@@ -32,6 +32,14 @@ const CW1SubkeysQueryPage: NextPage = () => {
     title: 'Contract Address',
     subtitle: 'Address of the NFT contract',
   })
+
+  const tokenOwnerState = useInputState({
+    id: 'nft-owner',
+    name: 'nft-owner',
+    title: 'NFT Owner',
+    subtitle: 'Owner of the NFT',
+  })
+
   const address = contractState.value
 
   const ownerState = useInputState({
@@ -69,7 +77,7 @@ const CW1SubkeysQueryPage: NextPage = () => {
         ownerAddress,
         tokenId: "0",
         messages,
-        type: "nft_info",
+        type: "all_nft_info",
       })
       return result
     },

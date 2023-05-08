@@ -82,7 +82,7 @@ const RequestTokens: NextPage = () => {
         <h1 className="font-heading text-4xl font-bold">Token Faucet</h1>
       </div>
 
-      <hr className="border-white/20" />
+      <hr className="border-black/20" />
 
       <div className="grid grid-cols-2 w-3/4">
         <TextInput

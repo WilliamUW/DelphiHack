@@ -16,7 +16,7 @@ export const SearchInput = (props: SearchInputProps) => {
       {/* search icon as label */}
       <label
         aria-label="Search"
-        className="flex absolute inset-y-0 left-4 items-center text-white/50"
+        className="flex absolute inset-y-0 left-4 items-center text-black/50"
         htmlFor={props.id}
       >
         <FaSearch size={16} />
@@ -26,7 +26,7 @@ export const SearchInput = (props: SearchInputProps) => {
       <input
         className={clsx(
           'py-2 pr-14 pl-10 w-[36ch] form-input placeholder-white/50',
-          'bg-white/10 rounded border-2 border-white/25 focus:ring focus:ring-plumbus',
+          'bg-white/10 rounded border-2 border-black/25 focus:ring focus:ring-plumbus',
         )}
         placeholder="Search..."
         {...rest}

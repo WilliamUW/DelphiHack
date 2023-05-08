@@ -12,14 +12,14 @@
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
   cursor: default;
   min-height: 100vh;
   text-rendering: optimizeLegibility;
-  @apply font-sans antialiased text-white bg-black;
+  @apply font-sans antialiased text-black bg-gray;
 }
 
 .no-scrollbar {

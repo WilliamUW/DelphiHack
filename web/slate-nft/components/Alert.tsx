@@ -27,7 +27,7 @@ export const Alert = (props: AlertProps) => {
         { 'bg-blue-500/25 border-blue-500': type === 'info' },
         { 'bg-yellow-500/25 border-yellow-500': type === 'warning' },
         { 'bg-red-500/25 border-red-500': type === 'error' },
-        { 'bg-stone-500/25 border-stone-500': type === 'ghost' },
+        { 'bg-white-500/25 border-stone-500': type === 'ghost' },
         className,
       )}
       {...rest}

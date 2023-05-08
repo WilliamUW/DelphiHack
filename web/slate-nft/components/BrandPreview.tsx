@@ -40,7 +40,7 @@ export const BrandPreview = ({ name, id = '', url, Asset }: BrandPreviewProps) =
           className={clsx('transition', {
             'text-plumbus': color === 'plumbus',
             'text-black': color === 'black',
-            'text-white': color === 'white',
+            'text-black': color === 'white',
           })}
         />
       </div>

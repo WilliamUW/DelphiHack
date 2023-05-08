@@ -23,7 +23,7 @@ export const Layout = ({ children, metadata = {} }: LayoutProps) => {
       <DefaultAppSeo />
 
       {/* plumbus confetti */}
-      <div className="fixed inset-0 -z-10 pointer-events-none juno-gradient-bg"></div>
+      <div className="fixed inset-0 -z-10 pointer-events-none"></div>
 
       {/* actual layout container */}
       <div className="hidden sm:flex">
@@ -45,9 +45,9 @@ export const Layout = ({ children, metadata = {} }: LayoutProps) => {
         <FaDesktop size={48} />
         <h1 className="text-2xl font-bold">Unsupported Viewport</h1>
         <p>
-          JunoTools is best viewed on the big screen.
+          Slate NFT is best viewed on the big screen.
           <br />
-          Please open JunoTools on your tablet or desktop browser.
+          Please open Slate NFT on your tablet or desktop browser.
         </p>
       </div>
     </div>

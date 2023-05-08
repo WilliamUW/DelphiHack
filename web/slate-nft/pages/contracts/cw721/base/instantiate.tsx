@@ -94,7 +94,8 @@ const CW721BaseInstantiatePage: NextPage = () => {
 
 
         let uri = {
-            image: j.fid
+            image: j.fid,
+            title: nameState.value,
         }
 
 

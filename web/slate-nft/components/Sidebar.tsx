@@ -76,7 +76,7 @@ export const Sidebar = () => {
       </ul>
 
       {/* footer attribution */}
-      <div className="text-xs text-white/50">
+      <div className="text-xs text-black/50">
         Slate {process.env.APP_VERSION} <br />
         Made by{' '}
         <Anchor className="text-plumbus hover:underline" href={links.jackalLabs}>
@@ -85,7 +85,7 @@ export const Sidebar = () => {
       </div>
 
       {/* footer social links */}
-      <div className="flex gap-x-6 items-center text-white/75">
+      <div className="flex gap-x-6 items-center text-black/75">
         {socialsLinks.map(({ Icon, href, text }) => (
           <Anchor key={href} className="hover:text-plumbus" href={href}>
             <Icon aria-label={text} size={20} />

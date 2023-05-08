@@ -15,7 +15,7 @@ export const HomeCard = (props: HomeCardProps) => {
   return (
     <div className={clsx('flex relative flex-col space-y-4', className)} {...rest}>
       <h2 className="font-heading text-xl font-bold">{title}</h2>
-      <p className="flex-grow text-white/75">{children}</p>
+      <p className="flex-grow text-black/75">{children}</p>
       {link && (
         <Anchor
           className={clsx(

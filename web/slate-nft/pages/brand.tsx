@@ -7,19 +7,19 @@ import { withMetadata } from 'utils/layout'
 
 const ASSETS: BrandPreviewProps[] = [
   {
-    name: 'JunoTools',
+    name: 'Slate NFT',
     id: 'brand',
     url: 'brand/brand.svg',
     Asset: dynamic(() => import('public/brand/brand.svg')),
   },
   {
-    name: 'JunoTools Bust',
+    name: 'Slate NFT Bust',
     id: 'brand-bust',
     url: 'brand/brand-bust.svg',
     Asset: dynamic(() => import('public/brand/brand-bust.svg')),
   },
   {
-    name: 'JunoTools Text',
+    name: 'Slate NFT Text',
     id: 'brand-text',
     url: 'brand/brand-text.svg',
     Asset: dynamic(() => import('public/brand/brand-text.svg')),
@@ -33,10 +33,10 @@ const BrandPage: NextPage = () => {
 
       <div className="space-y-2">
         <h1 className="text-4xl font-bold">Brand Assets</h1>
-        <p>View and download JunoTools brand assets</p>
+        <p>View and download Slate NFT brand assets</p>
       </div>
 
-      <hr className="border-white/20" />
+      <hr className="black/20" />
 
       {ASSETS.map((props, i) => (
         <BrandPreview key={`asset-${i}`} {...props} />

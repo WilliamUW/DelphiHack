@@ -6,6 +6,6 @@ export const meta = {
   domain: 'juno.tools',
   url: faviconsJson.developerURL,
   twitter: {
-    username: '@junotools',
+    username: '@Slate NFT',
   },
 }

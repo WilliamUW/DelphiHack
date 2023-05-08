@@ -38,7 +38,7 @@ export const JsonPreview = ({
   }
 
   return (
-    <div className="relative bg-stone-800/80 rounded border-2 border-white/20 divide-y-2 divide-white/20">
+    <div className="relative bg-white-800/80 rounded border-2 border-black/20 divide-y-2 divide-white/20">
       <div className="flex items-center py-1 px-2 space-x-2">
         <span className="text-sm font-bold">{title}</span>
         <div className="flex-grow" />

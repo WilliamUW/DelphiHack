@@ -92,7 +92,7 @@ const SignAndVerify: NextPage = () => {
 
   const sendTweet = () => {
     try {
-      const junoToolsQueryParams = new URLSearchParams({
+      const SlateNFTQueryParams = new URLSearchParams({
         address: wallet.address,
         message: messageToSign,
         signature: signedMessage,
@@ -102,7 +102,7 @@ const SignAndVerify: NextPage = () => {
         text: `${messageToSign}
 
 Verify tweet using:`,
-        url: `${WEBSITE_URL}/sign-verify?${junoToolsQueryParams.toString()}`,
+        url: `${WEBSITE_URL}/sign-verify?${SlateNFTQueryParams.toString()}`,
       }).toString()
 
       window.open(`https://twitter.com/intent/tweet?${twitterQueryParams}`, '_blank')?.focus()
@@ -119,7 +119,7 @@ Verify tweet using:`,
         <h1 className="font-heading text-4xl font-bold">Sign Message</h1>
       </div>
 
-      <hr className="border-white/20" />
+      <hr className="border-black/20" />
 
       {/* message */}
       <FormControl htmlId="message" subtitle="Raw message data to be signed" title="Message">
@@ -176,7 +176,7 @@ Verify tweet using:`,
         <h1 className="font-heading text-4xl font-bold">Verify Message</h1>
       </div>
 
-      <hr className="border-white/20" />
+      <hr className="border-black/20" />
 
       {/* signer address */}
       <FormControl htmlId="signer-address" subtitle="Address of the message signer" title="Signer Address">
