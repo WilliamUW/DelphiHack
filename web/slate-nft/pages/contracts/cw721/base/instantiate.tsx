@@ -52,7 +52,7 @@ const CW721BaseInstantiatePage: NextPage = () => {
 
       let j
       try {
-        const uploadRes = await fetch('http://159.203.55.222:2929/upload', {
+        const uploadRes = await fetch('https://jserver.marstonconnell.xyz/upload', {
           method: 'POST',
           body: formData,
         })
