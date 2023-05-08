@@ -22,6 +22,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build website
+        run: yarn build
+      - name: Export website
         run: yarn export
 
       - name: Deploy to GitHub Pages
