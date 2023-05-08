@@ -1,6 +1,6 @@
 import type { CW721BaseInstance } from 'contracts/cw721/base'
 
-export type QueryType = typeof QUERY_TYPES[number]
+export type QueryType = (typeof QUERY_TYPES)[number]
 
 export const QUERY_TYPES = [
   'owner_of',

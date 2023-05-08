@@ -27,58 +27,40 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
   //
 )
 
-export const AddressInput = forwardRef<HTMLInputElement, FormInputProps>(
-  function AddressInput(props, ref) {
-    return (
-      <FormInput
-        {...props}
-        placeholder={props.placeholder || 'neutron1arsaayyj5tash86mwqudmcs2fd5jt5zg...'}
-        ref={ref}
-        type="text"
-      />
-    )
-  },
-  //
-)
+export const AddressInput = forwardRef<HTMLInputElement, FormInputProps>(function AddressInput(props, ref) {
+  return (
+    <FormInput
+      {...props}
+      placeholder={props.placeholder || 'neutron1arsaayyj5tash86mwqudmcs2fd5jt5zg...'}
+      ref={ref}
+      type="text"
+    />
+  )
+})
 
-export const ValidatorAddressInput = forwardRef<HTMLInputElement, FormInputProps>(
-  function ValidatorAddressInput(props, ref) {
-    return (
-      <FormInput
-        {...props}
-        placeholder={props.placeholder || 'junovaloper1234567890abcdefghijklmnopqrstuvwxyz...'}
-        ref={ref}
-        type="text"
-      />
-    )
-  },
-  //
-)
+export const ValidatorAddressInput = forwardRef<HTMLInputElement, FormInputProps>(function ValidatorAddressInput(
+  props,
+  ref,
+) {
+  return (
+    <FormInput
+      {...props}
+      placeholder={props.placeholder || 'junovaloper1234567890abcdefghijklmnopqrstuvwxyz...'}
+      ref={ref}
+      type="text"
+    />
+  )
+})
 
-export const NumberInput = forwardRef<HTMLInputElement, FormInputProps>(
-  function NumberInput(props, ref) {
-    return <FormInput {...props} ref={ref} type="number" />
-  },
-  //
-)
-
-export const TextInput = forwardRef<HTMLInputElement, FormInputProps>(
-  function TextInput(props, ref) {
-    return <FormInput {...props} ref={ref} type="text" />
-  },
-  //
-)
-
-export const FileInput = forwardRef<HTMLInputElement, FormInputProps>(
-    function FileInput(props, ref) {
-        return <FormInput {...props} ref={ref} type="file" />
-    },
-    //
-)
-
-export const UrlInput = forwardRef<HTMLInputElement, FormInputProps>(
-  function UrlInput(props, ref) {
-    return <FormInput {...props} ref={ref} type="url" />
-  },
-  //
-)
+export const NumberInput = forwardRef<HTMLInputElement, FormInputProps>(function NumberInput(props, ref) {
+  return <FormInput {...props} ref={ref} type="number" />
+})
+export const TextInput = forwardRef<HTMLInputElement, FormInputProps>(function TextInput(props, ref) {
+  return <FormInput {...props} ref={ref} type="text" />
+})
+export const FileInput = forwardRef<HTMLInputElement, FormInputProps>(function FileInput(props, ref) {
+  return <FormInput {...props} ref={ref} type="file" />
+})
+export const UrlInput = forwardRef<HTMLInputElement, FormInputProps>(function UrlInput(props, ref) {
+  return <FormInput {...props} ref={ref} type="url" />
+})

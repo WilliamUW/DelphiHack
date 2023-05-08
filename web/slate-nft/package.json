@@ -8,7 +8,6 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint --fix \"**/*.{js,cjs,mjs,jsx,ts,tsx}\" && tsc --noEmit --pretty",
-    "prepare": "husky install",
     "start": "next start"
   },
   "dependencies": {

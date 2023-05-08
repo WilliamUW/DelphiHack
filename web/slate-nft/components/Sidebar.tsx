@@ -8,9 +8,7 @@ import { footerLinks, links, socialsLinks } from 'utils/links'
 import { SidebarLayout } from './SidebarLayout'
 import { WalletLoader } from './WalletLoader'
 
-const routes = [
-  { text: 'Studio', href: `/contracts/cw721/base` }
-]
+const routes = [{ text: 'Studio', href: `/contracts/cw721/base` }]
 
 export const Sidebar = () => {
   const router = useRouter()
@@ -20,7 +18,7 @@ export const Sidebar = () => {
     <SidebarLayout>
       {/* juno brand as home button */}
       <Anchor href="/" onContextMenu={(e) => [e.preventDefault(), router.push('/brand')]}>
-          <h1 className='font-heading text-5xl font-bold text-plumbus hover:text-plumbus-light transition' >Slate</h1>
+        <h1 className="font-heading text-5xl font-bold text-plumbus hover:text-plumbus-light transition">Slate</h1>
       </Anchor>
 
       {/* wallet button */}

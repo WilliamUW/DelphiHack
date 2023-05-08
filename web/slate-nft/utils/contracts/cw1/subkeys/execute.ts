@@ -4,7 +4,7 @@ import type { CW1SubkeysInstance, Permissions } from 'contracts/cw1/subkeys'
 import { useCW1SubkeysContract } from 'contracts/cw1/subkeys'
 import { NETWORK } from 'utils/constants'
 
-export type ExecuteType = typeof EXECUTE_TYPES[number]
+export type ExecuteType = (typeof EXECUTE_TYPES)[number]
 
 export const EXECUTE_TYPES = [
   'execute',
@@ -54,7 +54,7 @@ export const EXECUTE_LIST: ExecuteListItem[] = [
   },
 ]
 
-export type ExecutableType = typeof EXECUTABLE_TYPES[number]
+export type ExecutableType = (typeof EXECUTABLE_TYPES)[number]
 
 export const EXECUTABLE_TYPES = ['send', 'delegate', 'undelegate', 'redelegate', 'withdraw'] as const
 

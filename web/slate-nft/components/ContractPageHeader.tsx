@@ -7,9 +7,5 @@ interface ContractPageHeaderProps {
 }
 
 export const ContractPageHeader = ({ title, description, link }: ContractPageHeaderProps) => {
-  return (
-    <PageHeader title={title}>
-      {description}
-    </PageHeader>
-  )
+  return <PageHeader title={title}>{description}</PageHeader>
 }

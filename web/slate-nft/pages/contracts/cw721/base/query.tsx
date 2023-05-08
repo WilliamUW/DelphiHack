@@ -1,10 +1,7 @@
-import clsx from 'clsx'
 import { Conditional } from 'components/Conditional'
 import { ContractPageHeader } from 'components/ContractPageHeader'
-import { FormControl } from 'components/FormControl'
 import { AddressInput } from 'components/forms/FormInput'
 import { useInputState } from 'components/forms/FormInput.hooks'
-import { JsonPreview } from 'components/JsonPreview'
 import { LinkTabs } from 'components/LinkTabs'
 import { cw721BaseLinkTabs } from 'components/LinkTabs.data'
 import { useContracts } from 'contexts/contracts'
@@ -16,11 +13,10 @@ import { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { useQuery } from 'react-query'
 import type { QueryType } from 'utils/contracts/cw721/base/query'
-import { dispatchQuery, QUERY_LIST } from 'utils/contracts/cw721/base/query'
+import { dispatchQuery } from 'utils/contracts/cw721/base/query'
 import { withMetadata } from 'utils/layout'
 import { links } from 'utils/links'
-import  Image from 'next/image'
-import {ImagePreview} from "../../../../components/ImagePreview";
+import { ImagePreview } from '../../../../components/ImagePreview'
 
 const CW1SubkeysQueryPage: NextPage = () => {
   const { cw721Base: contract } = useContracts()
@@ -75,9 +71,9 @@ const CW1SubkeysQueryPage: NextPage = () => {
 
       const result = await dispatchQuery({
         ownerAddress,
-        tokenId: "0",
+        tokenId: '0',
         messages,
-        type: "all_nft_info",
+        type: 'all_nft_info',
       })
       return result
     },
@@ -120,7 +116,6 @@ const CW1SubkeysQueryPage: NextPage = () => {
           <Conditional test={addressVisible}>
             <AddressInput {...ownerState} />
           </Conditional>
-
         </div>
         <ImagePreview response={response} />
         {/*<JsonPreview content={address ? { type, response } : null} title="Query Response" />*/}

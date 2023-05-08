@@ -1,6 +1,6 @@
 import type { CW20BaseInstance } from 'contracts/cw20/base'
 
-export type QueryType = typeof QUERY_TYPES[number]
+export type QueryType = (typeof QUERY_TYPES)[number]
 
 export const QUERY_TYPES = [
   'balance',

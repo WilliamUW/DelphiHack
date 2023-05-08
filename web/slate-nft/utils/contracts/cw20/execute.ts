@@ -1,7 +1,7 @@
 import type { CW20BaseInstance } from 'contracts/cw20/base'
 import { useCW20BaseContract } from 'contracts/cw20/base'
 
-export type ExecuteType = typeof EXECUTE_TYPES[number]
+export type ExecuteType = (typeof EXECUTE_TYPES)[number]
 
 export const EXECUTE_TYPES = [
   'mint',

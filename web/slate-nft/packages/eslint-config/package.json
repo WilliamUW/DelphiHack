@@ -26,6 +26,6 @@
       "prettier --write"
     ]
   },
-  "prettier": "@juno-tools/prettier-config",
+  "prettier": "@slate-nft/prettier-config",
   "license": "MIT"
 }

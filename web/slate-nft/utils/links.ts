@@ -21,9 +21,7 @@ export const links = {
   'Docs CW721 Base': `https://docs.juno.tools/docs/dashboards/cw-721/base/introduction`,
 }
 
-export const footerLinks = [
-  { text: 'Powered by Jackal', href: links.jackal },
-]
+export const footerLinks = [{ text: 'Powered by Jackal', href: links.jackal }]
 
 export const legacyNavbarLinks = [
   { text: 'Airdrops', href: `/airdrops` },

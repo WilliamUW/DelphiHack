@@ -1,6 +1,6 @@
 import type { CosmosMsg, CW1SubkeysInstance } from 'contracts/cw1/subkeys'
 
-export type QueryType = typeof QUERY_TYPES[number]
+export type QueryType = (typeof QUERY_TYPES)[number]
 
 export const QUERY_TYPES = [
   'admins',

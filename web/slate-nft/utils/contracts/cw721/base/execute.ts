@@ -1,7 +1,7 @@
 import type { CW721BaseInstance } from 'contracts/cw721/base'
 import { useCW721BaseContract } from 'contracts/cw721/base'
 
-export type ExecuteType = typeof EXECUTE_TYPES[number]
+export type ExecuteType = (typeof EXECUTE_TYPES)[number]
 
 export const EXECUTE_TYPES = [
   'transfer_nft',
