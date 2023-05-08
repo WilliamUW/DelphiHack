@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import type { Dispatch, SetStateAction } from 'react'
 
 export const BRAND_COLORS = ['plumbus', 'black', 'white'] as const
-export type BrandColor = typeof BRAND_COLORS[number]
+export type BrandColor = (typeof BRAND_COLORS)[number]
 
 export interface BrandColorPickerProps {
   onChange: Dispatch<SetStateAction<BrandColor>>
