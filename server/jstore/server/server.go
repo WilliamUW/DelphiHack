@@ -32,6 +32,7 @@ const MaxFileSize = 32 << 30
 func fileUpload(w *http.ResponseWriter, r *http.Request, cmd *cobra.Command, db *leveldb.DB) {
 	clientCtx, err := client.GetClientTxContext(cmd)
 	if err != nil {
+		fmt.Println(err)
 		return
 	}
 	ctx := utils.GetServerContextFromCmd(cmd)
@@ -90,7 +91,8 @@ func fileUpload(w *http.ResponseWriter, r *http.Request, cmd *cobra.Command, db 
 	// If you don't close it, your request will be missing the terminating boundary.
 	writer.Close()
 
-	req, err := http.NewRequest("POST", "https://jackalplswork.com/upload", &b)
+	fmt.Println("upload")
+	req, err := http.NewRequest("POST", "https://jackal1.co.uk/upload", &b)
 	if err != nil {
 		v := ErrorResponse{
 			Error: err.Error(),
@@ -102,8 +104,9 @@ func fileUpload(w *http.ResponseWriter, r *http.Request, cmd *cobra.Command, db 
 		}
 		return
 	}
+	fmt.Println("1")
 
-	cli := &http.Client{Timeout: time.Second * 100}
+	cli := &http.Client{Timeout: time.Second * 1000}
 	req.Header.Set("Content-Type", writer.FormDataContentType())
 	res, err := cli.Do(req)
 	if err != nil {
@@ -117,10 +120,25 @@ func fileUpload(w *http.ResponseWriter, r *http.Request, cmd *cobra.Command, db 
 		}
 		return
 	}
+	fmt.Println("2")
+
 	// Check the response
 	if res.StatusCode != http.StatusOK {
 		var errRes provider.ErrorResponse
-		_ = json.NewDecoder(res.Body).Decode(&errRes)
+		err = json.NewDecoder(res.Body).Decode(&errRes)
+		if err != nil {
+			v := ErrorResponse{
+				Error: err.Error(),
+			}
+			(*w).WriteHeader(http.StatusInternalServerError)
+			err = json.NewEncoder(*w).Encode(v)
+			if err != nil {
+				ctx.Logger.Error(err.Error())
+				return
+			}
+		}
+		fmt.Println("3")
+
 
 		err = fmt.Errorf("bad status: %s", errRes.Error)
 		v := ErrorResponse{
@@ -133,6 +151,8 @@ func fileUpload(w *http.ResponseWriter, r *http.Request, cmd *cobra.Command, db 
 		}
 		return
 	}
+	fmt.Println("4")
+
 
 	var pup provider.UploadResponse
 	err = json.NewDecoder(res.Body).Decode(&pup)
@@ -147,6 +167,8 @@ func fileUpload(w *http.ResponseWriter, r *http.Request, cmd *cobra.Command, db 
 		}
 		return
 	}
+
+	fmt.Println("5")
 
 	msg := types.NewMsgSignContract(
 		address,
@@ -166,6 +188,8 @@ func fileUpload(w *http.ResponseWriter, r *http.Request, cmd *cobra.Command, db 
 		}
 		return
 	}
+
+
 
 	fmt.Println(txRes)
 
